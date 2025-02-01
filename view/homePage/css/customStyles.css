@@ -1,0 +1,506 @@
+/*    PLAN TRENINGOWY   */
+.plan-view {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.plan{
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.plan:hover {
+    background-color: #f0f0f0;
+}
+.plan .left {
+    display: flex;
+    align-items: center;
+}
+.plan .left .status {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+.plan .left .status.Aktywny {
+    background-color: #28a745;
+    color: white;
+}
+.plan .right {
+    text-align: right;
+}
+.plan .right .date {
+    font-size: 14px;
+    color: #777;
+}
+.plan .right .expand-btn{
+    margin-top: 10px;
+    padding: 5px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.plan .right .expand-btn:hover {
+    background-color: #0056b3;
+}
+
+.details {
+    margin-top: 20px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    border-left: 5px solid #007bff;
+    max-height: 0;
+    transition: max-height 0.5s ease-out, padding 0.3s ease-out;
+    padding: 0 20px;
+}
+
+.details ul {
+    padding: 0;
+    list-style-type: none;
+}
+.details ul li {
+    margin: 10px 0;
+}
+.details ul li .exercise {
+    font-weight: bold;
+}
+.details ul li .sets {
+    font-size: 14px;
+    color: #555;
+}
+
+.spacer {
+    height: 20px;
+}
+.delete-btn, .activate-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#session-dlt-btn {
+    margin-top: 5px;
+    width: 80px;
+}
+
+.delete-btn {
+    background-color: #f42525;
+}
+
+.activate-btn {
+    background-color: #28a745;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+.activate-btn:hover {
+    background-color: darkgreen;
+}
+
+
+
+
+/*    KONIEC PLANU TRENINGOWEGO   */
+
+
+
+
+.form-container {
+    visibility: hidden;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.form-container-2 {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.collapsible-content.open {
+    max-height: none; /* Usuwamy ograniczenie wysokości */
+    overflow: visible; /* Umożliwiamy widoczność wszystkich elementów */
+}
+
+.plan-name-form {
+    width: 100%;
+    max-width: 450px; /* Ustalamy maksymalną szerokość */
+    padding: 12px 15px;
+    border: 2px solid #007bff; /* Niebieska obwódka */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.plan-name-form::placeholder {
+    color: #888;
+}
+
+.collapsible-content label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#which-plan {
+    font-weight: normal;
+}
+
+#radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Odstęp między przyciskami */
+    margin-bottom: 20px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#session-radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.radio-group label {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+.radio-group input[type="radio"]:checked + label {
+    outline: 2px solid #007bff;
+    background-color: #e7f1ff;
+}
+
+.form-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.next-button, .cancel-button {
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.training-day {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.exercise-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.exercise-group label {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+.exercise-group input {
+    padding: 12px 15px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    flex: 1;
+    box-sizing: border-box;
+}
+.exercise-group input::placeholder {
+    color: #888;
+}
+
+.exercise-group .exercise-name {
+    flex: 2;
+}
+
+.exercise-group .series-count {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .exercise-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .exercise-group .exercise-name,
+    .exercise-group .series-count {
+        width: 100%;
+    }
+}
+
+.undo-button {
+    display: inline-block;
+    padding: 12px;
+    margin-left: 10px;
+    background-color: #b8b8b8;
+    color: #171717;
+    font-size: 16px;
+    border: 1px solid #171717;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.undo-button:hover {
+    background-color: #838383;
+}
+
+.next-ex-button {
+    display: block;
+    width: 200px;
+    padding: 12px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    color: #007bff;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.next-ex-button:hover {
+    background-color: #dfdfdf;
+}
+
+.button:hover, .next-button:hover {
+    background-color: #0056b3;
+}
+
+.cancel-button {
+    background-color: #f42525;
+}
+
+.cancel-button:hover {
+    background-color: darkred;
+}
+
+
+.add-plan-btn {
+    visibility: visible;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    color: #007bff;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+.add-plan-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.add-plan-btn i {
+    margin-right: 10px;
+}
+
+.ex-label {
+    margin: auto;
+}
+
+
+
+/* Kontener dla wyboru daty */
+.date-selection-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* Stylizacja opcji radiowych */
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Styl tekstu obok przycisków radiowych */
+.radio-option label {
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Wyświetlanie daty przy dzisiejszym dniu */
+.date-display {
+    font-size: 14px;
+    color: #555;
+    margin-left: auto;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+/* Pole wyboru daty */
+.custom-date-field {
+    display: none; /* Ukryte domyślnie */
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.custom-date-field input {
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Animacja przełączania widoczności */
+.custom-date-field.show {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animacja fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Tabela */
+#session-detail {
+    width: 70%;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 0 auto 20px;
+}
+
+/* Nagłówki tabeli */
+#session-detail thead {
+    background-color: #7dbeff;
+    color: white;
+}
+
+#exercise-name {
+    background-color: #ffffff;
+    color: black;
+}
+
+/* Komórki tabeli */
+#session-detail td, #session-detail th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Pierwsza kolumna (Seria) będzie miała mniejszą szerokość */
+#session-detail th:nth-child(1),
+#session-detail td:nth-child(1) {
+    width: 15%;
+}
+
+/* Równa szerokość dla pozostałych kolumn */
+#session-detail th:nth-child(2),
+#session-detail td:nth-child(2),
+#session-detail th:nth-child(3),
+#session-detail td:nth-child(3) {
+    width: 42%;
+}
+
+/* Kolor wierszy tabeli na przemian */
+#session-detail .even-row {
+    background-color: #f2f2f2; /* Jasnoszary */
+}
+
+#session-detail .odd-row {
+    background-color: white; /* Biały */
+}
+
+/* Stylowanie tabeli podczas interakcji */
+#session-detail tr:hover {
+    background-color: #ddd; /* Kolor zmienia się na ciemniejszy, gdy najedziesz na wiersz */
+}
+
+/* Stylowanie komórki z nazwą ćwiczenia (Usunięte tło) */
+#session-detail th.exercise-name {
+    text-align: center;
+    color: #ffffff; /* Ustalamy czarny kolor tekstu */
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Dodatkowy margines w kontenerze karty */
+.card-body {
+    padding: 0;
+}
+
+/* Stylowanie przycisków (w razie potrzeby) */
+.expand-butn, .delete-butn {
+    padding: 8px 16px;
+    border: none;
+    background-color: #1ab8dc;
+    color: white;
+    cursor: pointer;
+    margin: 4px;
+}
+
+.expand-butn:hover{
+    background-color: #2943ba;
+}
+
+
