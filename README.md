@@ -47,6 +47,12 @@
    - Go to the "Statistics" tab.
    - View detailed statistics such as the number of sessions, sets, reps, and weight changes in specific exercises.
 
+## Screen shots
+
+![Zrzut ekranu 2025-02-01 181423](https://github.com/user-attachments/assets/ecb2f978-61c5-455a-a11d-7c63fad2118c)
+![Zrzut ekranu 2025-02-01 181433](https://github.com/user-attachments/assets/0d49dcf0-f18a-4d43-9554-34476618c4e0)
+![Zrzut ekranu 2025-02-01 181417](https://github.com/user-attachments/assets/8e5de5a9-dd20-4902-abac-f7572324b5e6)
+
 
 ## Technology
 
